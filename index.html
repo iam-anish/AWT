@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        .login, .heading{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        #error{
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading"><h2>Sign up for Register</h2></div>
+    <br>
+    <form action="">
+        <div class="login">
+            <label for="fname">First Name:</label>
+            <br>
+            <input type="text" name="fname" id="fname" cols="30" rows="10" pattern="[A-Za-z]{6,}" title="Name must contain alpha characters only." required></input>
+            <br>
+            <label for="lname">Last Name:</label>
+            <br>
+            <input type="text" name="lname" id="lname" cols="30" rows="10" pattern="[A-Za-z]{6,}" title="Name must contain alpha characters only." required></input>
+            <br>
+
+            <label for="email">Email:</label>
+            <br>
+            <input type="email" name="email" pattern=".+charusat\.edu\.in" id="email" cols="30" rows="10" required></input>
+            <br>
+
+            <label for="password">Password:</label>
+            <br>
+            <input type="password" name="password" id="password" cols="30" rows="10" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" minlength="6" maxlength="12" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 upto 12 characters" required></input>
+            <br>
+            <label for="confirnpassword">Confirm Password:</label>
+            <br>
+            <input type="password" name="confirnpassword" id="confirnpassword" cols="30" rows="10" required></input>
+            <br>
+
+            <label for="mobilenumber">Mobile Number:</label>
+            <br>
+            <input type="number" name="mobilenumber" id="mobilenumber" cols="30" rows="10" minlength="10" maxlength="10" required></input>
+            <br>
+
+            <label for="Gender">Gender:</label>
+            <div>
+            <input type="radio" name="Gender" id="Gender" required>
+            <label for="Male">Male</label>
+            <input type="radio" name="Gender" id="Gender" required>
+            <label for="Female">Female</label>
+            </div>
+            <br>
+            <label for="State">State:</label>
+            <br>
+            <select name="State" id="State" required>
+                <Option>Others</Option>
+                <Option>Gujarat</Option>
+                <Option>Delhi</Option>
+                <Option>Rajasthan</Option>
+                <Option>Punjab</Option>
+                <Option>Kerala</Option>
+                <Option>Tamilnadu</Option>
+                <Option>Maharashtra</Option>
+                <Option>Bihar</Option>
+                <Option>Bangal</Option>
+                <Option>Jammu Kashmir</Option>
+                <Option>Karnataka</Option>
+            </select>
+            <br>
+            <div>
+                <input type="checkbox" name="aggrement" id="aggrement" required>
+                <label for="aggrement">agree to terms and conditions.</label>
+            </div>
+            <br>
+            <button type="submit" onclick="formsubmit()">Register</button>
+            <p id="error">*nbkvbj</p>
+        </div>
+    </form>
+</body>
+<script src="./index.js"></script>
+</html>
